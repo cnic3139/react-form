@@ -25,7 +25,6 @@ class Form extends React.Component {
 	}
 
 	// Get user inputted value out of HTML element.
-	// TODO add case for radio input.
 	getValue(input, type) {
 		let value = input;
 		switch(type) {
@@ -150,7 +149,6 @@ class Form extends React.Component {
 	// Submit the form.
 	submit() {
 		let outputData = {};
-		// TODO make these common? i dunno
 		const form = document.forms['form'];
 		const formNodes = Array.prototype.slice.call(form.childNodes);
 		this.props.schema.fields.forEach(field => {
