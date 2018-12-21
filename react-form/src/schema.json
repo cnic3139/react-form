@@ -1,0 +1,85 @@
+{
+	"fields": [
+		{
+			"id": "full_name",
+			"title": "Full name",
+			"type": "text",
+			"validations": [
+				{
+					"containsChar": " "
+				}
+			],
+			"optional": false
+		},
+		{
+			"id": "dob",
+			"title": "Date of birth",
+			"type": "date",
+			"validations": [
+				{
+					"dateGreaterThan": {
+						"value": 18,
+						"unit": "years"
+					}
+				}
+			],
+			"optional": false
+		},
+		{
+			"id": "gender",
+			"title": "Gender",
+			"type": "radio",
+			"options": [
+				"Male",
+				"Female"
+			],
+			"validations": [],
+			"optional": true
+		},
+		{
+			"id": "contact_numbers",
+			"title": "Contact numbers",
+			"type": "array",
+			"arrayOfType": "text",
+			"validations": [],
+			"optional": true
+		},
+		{
+			"id": "guardian_consent",
+			"title": "Require consent of guardian",
+			"type": "checkbox",
+			"options": [
+				"Yes"
+			],
+			"validations": [],
+			"optional": true
+		},
+		{
+			"id": "guardian_details",
+			"title": "Guardian details",
+			"type": "multipart",
+			"parts": [
+				{
+					"id": "guardian_details_name",
+					"title": "Name",
+					"type": "text"
+				},
+				{
+					"id": "guardian_details_contact_number",
+					"title": "Contact number",
+					"type": "text"
+				}
+			],
+			"validations": [],
+			"optional": {
+				"dependendOn": "guardian_consent",
+				"values": [
+					{
+						"true": false
+					}
+				],
+				"default": true
+			}
+		}
+	]
+}

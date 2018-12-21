@@ -1,0 +1,17 @@
+form {
+	margin: 16px;
+	border: 1px solid black;
+}
+
+label {
+	margin: 16px 4px;
+	padding: 4px;
+}
+
+div {
+	margin: 16px 4px;
+}
+
+input {
+	margin: 4px;
+}
