@@ -72,7 +72,7 @@
 			],
 			"validations": [],
 			"optional": {
-				"dependendOn": "guardian_consent",
+				"dependentOn": "guardian_consent",
 				"values": [
 					{
 						"true": false
